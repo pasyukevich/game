@@ -1,0 +1,180 @@
+@import 'play-button';
+$mainColor: #4FC3F7;
+$secondaryColor: #1beab4;
+.container {
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+.cursor-pointer {
+    cursor: url(../images/UI/cursor-pointer.png), default;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.fixed-body {
+    overflow-y: hidden;
+    & header,
+    & footer,
+    & main section:not(.screenshots),
+    .screenshots-item img:not(.increased),
+    h2
+     {
+        filter: blur(5px);
+    }
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    cursor: url(../images/UI/cursor.png), default;
+    text-align: center;
+    font-family: 'DeathStar',fantasy;
+}
+
+a {
+    @extend .cursor-pointer;
+    text-decoration: none;
+    font-family: 'DeathStar',fantasy;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $mainColor;
+    min-height: 80px;
+    padding: 0 10px;
+    font-size: 25px;
+    a {
+        color: rgba(255, 255, 255, .8);
+        &:hover {
+            color: #fff;
+        }
+    }
+    .nav-list {
+        display: flex;
+        justify-content: space-around;
+        vertical-align: middle;
+        .nav-item {
+            margin-right: 10px;
+        }
+    }
+}
+
+main {
+    padding-top: 80px;
+}
+
+h1 {
+    padding-top: 140px;
+    text-align: center;
+    color: $mainColor;
+    font-family: 'DeathStar',fantasy;
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
+    color: #000000;
+    font-family: 'DeathStar';
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+section:nth-child(2n+1) {
+    background: #ECEFF1;
+}
+
+section {
+    width: 100%;
+    &:not(:first-child){
+        padding: 180px 0;
+    }
+}
+
+:root .play {
+    height: 56vw;
+    position: relative;
+    background: url('../images/background.jpg') no-repeat;
+    background-size: contain;
+    button {
+        @extend .cursor-pointer;
+        font-family: 'DeathStar',fantasy;
+        border: none;
+        outline: none;
+    }
+}
+
+.rules {
+    font-family: 'DeathStar',fantasy;
+    padding: 86px 0;
+    font-size: 110px;
+}
+
+.controls {
+    .controls-image {
+        width: 1074px;
+        height: 310px;
+        background: url('../images/controls.png') no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+    }
+    p {
+        align-self: center;
+        font-family: 'DeathStar',fantasy;
+        font-size: 20px;
+        display: inline-flex;
+        width: 200px;
+        margin-right: 30px;
+    }
+}
+
+.screenshots-list {
+    @extend .container;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    .screenshots-item {
+        @extend .cursor-pointer;
+        margin: 30px 4px;
+        img {
+            width: 315px;
+            &.increased {
+                width: 80%;
+                position: fixed;
+                top: 6%;
+                left: 10vw;
+                z-index: 101;
+                
+            }
+        }
+    }
+}
+
+.about{
+    font-size: 40px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    background: $secondaryColor;
+    a {
+        text-transform: uppercase;
+        font-family: 'DeathStar',fantasy;
+        font-size: 30px;
+        color: #fff;
+    }
+}

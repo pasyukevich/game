@@ -1,0 +1,19 @@
+@font-face{
+    
+    font-family: 'DeathStar';
+    
+    src: url('../fonts/DeathStar.eot');
+    
+    src: url('../fonts/DeathStar.eot?iefix') format('eot'),
+    
+    url('../fonts/DeathStar.woff') format('woff'),
+    
+    url('../fonts/DeathStar.ttf') format('truetype'),
+    
+    url('../fonts/DeathStar.svg#webfont') format('svg');
+    
+    font-weight: normal;
+    
+    font-style: normal;
+    
+    }
